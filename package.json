@@ -1,0 +1,8 @@
+{
+  "name": "web_app2-serverless",
+  "private": true,
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@vercel/node": "^3.2.22"
+  }
+}
