@@ -2,6 +2,7 @@
 
 A full-stack **Flutter** travel planning application powered by **Firebase** and **Google Gemini AI**. The app features a role-based system with three distinct dashboards for **Travelers**, **Travel Agents**, and **Admins**, plus an integrated AI assistant on every screen.
 
+Live: https://saksham230911186.web.app/
 ---
 
 ## Features
