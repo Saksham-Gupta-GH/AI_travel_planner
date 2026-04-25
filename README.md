@@ -1,40 +1,40 @@
-# ✈️ AI Travel Planner
+# AI Travel Planner
 
 A full-stack **Flutter** travel planning application powered by **Firebase** and **Google Gemini AI**. The app features a role-based system with three distinct dashboards for **Travelers**, **Travel Agents**, and **Admins**, plus an integrated AI assistant on every screen.
 
 ---
 
-## 🌟 Features
+## Features
 
-### 👤 Role-Based Access
+### Role-Based Access
 | Role | Capabilities |
 |------|-------------|
 | **Traveler** | Browse & search packages, book trips, view booking history, wishlist, world map explorer |
 | **Agent** | Create & manage travel packages with images & locations, view all customer bookings |
 | **Admin** | Manage users & agents, monitor system activity, full platform oversight |
 
-### 🤖 AI Assistant (Gemini 2.5 Flash)
+### AI Assistant (Gemini 2.5 Flash)
 - Embedded AI chat sidebar available on **all three dashboards**
 - Context-aware — knows the user's role and name
 - Powered by a **Vercel serverless function** to keep the API key secure (never exposed in the APK)
 
-### 🗺️ Interactive Map
+### Interactive Map
 - OpenStreetMap-based world explorer (no API key required)
 - Agents can pin exact pickup/destination locations via an in-app location picker
 - Travelers can explore destinations visually
 
-### 📦 Package Management
+### Package Management
 - Agents create rich travel packages (title, description, price, duration, destinations, images)
 - Real-time sync via **Cloud Firestore**
 - QR code generation for bookings (`qr_flutter`)
 
-### 🔐 Authentication
+### Authentication
 - Firebase Authentication (email/password)
 - Persistent login with role-based routing on startup
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -47,13 +47,13 @@ A full-stack **Flutter** travel planning application powered by **Firebase** and
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 lib/
 ├── main.dart                   # App entry, theme, routing
 ├── firebase_options.dart       # Auto-generated Firebase config
-├── models/                     # Data models (Package, Booking, User…)
+├── models/                     # Data models (Package, Booking, User...)
 ├── providers/                  # AuthProvider, WishlistProvider
 ├── screens/
 │   ├── auth/                   # Login & Register screens
@@ -74,7 +74,7 @@ api/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -123,7 +123,7 @@ Make sure to enable:
 
 ---
 
-## ☁️ Deploying the AI Backend (Vercel)
+## Deploying the AI Backend (Vercel)
 
 The Gemini API key is kept secure on the server — it is **never bundled** into the Flutter app or APK.
 
@@ -154,7 +154,7 @@ https://your-vercel-app.vercel.app/api/gemini-chat
 
 ---
 
-## 📱 Running the Flutter App
+## Running the Flutter App
 
 ### Web (Chrome)
 
@@ -181,11 +181,23 @@ flutter build apk \
 
 ---
 
-## 🌐 Deploying the Flutter Web App
+## Deploying the Flutter Web App
 
 You can host the Flutter Web build on **Firebase Hosting** or **Vercel** (see below).
 
-### Option A — Firebase Hosting
+### Option A — Firebase Hosting (Recommended)
+
+```bash
+./deploy.sh https://your-vercel-app.vercel.app
+```
+
+This script builds Flutter Web with the AI endpoint baked in and deploys to Firebase Hosting in one step. Your app will be live at:
+
+```
+https://saksham230911186.web.app
+```
+
+Or manually:
 
 ```bash
 flutter build web --dart-define=AI_API_ENDPOINT=https://your-vercel-app.vercel.app/api/gemini-chat
@@ -208,7 +220,7 @@ npx vercel build/web --prod
 
 ---
 
-## 🔒 Security Notes
+## Security Notes
 
 - `lib/firebase_options.dart` contains public Firebase config values (this is safe for client-side Firebase SDKs)
 - The **Gemini API key is never in the Flutter code** — it lives only in Vercel environment variables
@@ -216,7 +228,7 @@ npx vercel build/web --prod
 
 ---
 
-## 📦 Key Dependencies
+## Key Dependencies
 
 ```yaml
 firebase_core: ^3.6.0
@@ -232,7 +244,7 @@ http: ^1.1.0
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/my-feature`
@@ -242,10 +254,10 @@ http: ^1.1.0
 
 ---
 
-## 📄 License
+## License
 
 This project is for educational purposes. Feel free to use and adapt it.
 
 ---
 
-*Built with ❤️ using Flutter, Firebase & Google Gemini AI*
+*Built with Flutter, Firebase & Google Gemini AI*
