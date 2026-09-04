@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class AiAssistantService {
   static const String _configuredEndpoint = String.fromEnvironment(
     'AI_API_ENDPOINT',
-    defaultValue: '',
+    defaultValue: 'https://gemini-backend-ruddy.vercel.app/api/gemini-chat',
   );
 
   Uri _resolveEndpoint() {
